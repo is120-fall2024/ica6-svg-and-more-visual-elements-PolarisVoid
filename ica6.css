@@ -147,6 +147,8 @@ section .iframe {
 .hw6-container {
   height: 100vh;
   background-color: var(--secondary);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .iframe iframe {
@@ -156,3 +158,31 @@ section .iframe {
   border-radius: 10px;
 }
 
+.carousel {
+  width: 100wh;
+  display: flex;
+  animation: infinite 20s slide;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.carousel img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
